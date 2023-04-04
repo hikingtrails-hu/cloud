@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+
+const { readFileSync, writeFileSync } = require('fs')
+const { globSync } = require('glob')
+
+globSync('./dist/**/*.js', {}).forEach(path => {
+    const content = readFileSync(path, { encoding: 'utf8' }).toString()
+    writeFileSync(path, content.replaceAll('require("@/', 'require("@dist/'), {encoding: 'utf8'})
+})

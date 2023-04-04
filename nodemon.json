@@ -1,0 +1,7 @@
+{
+    "watch": ["dev", "src", ".env"],
+    "ignore": [],
+    "ext": "ts,json",
+    "exec": "$TSNODE dev/start.ts",
+    "delay": 500
+}

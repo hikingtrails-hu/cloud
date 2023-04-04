@@ -1,0 +1,47 @@
+{
+    "include": ["**/*.ts"],
+    "exclude": ["node_modules", "**/*.test.ts"],
+    "ts-node": {
+        "transpileOnly": true,
+        "swc": true
+    },
+    "compilerOptions": {
+        "target": "es2022",
+        "lib": ["ES2022"],
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "paths": {
+            "@/*": ["./src/*"],
+            "@dev/*": ["./dev/*"],
+            "@dist/*": ["./dist/*"]
+        },
+        "resolveJsonModule": true,
+        "declaration": true,
+        "declarationMap": true,
+        "sourceMap": true,
+        "outDir": "./dist",
+        "isolatedModules": true,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "noImplicitAny": true,
+        "strictFunctionTypes": true,
+        "strictBindCallApply": true,
+        "strictPropertyInitialization": true,
+        "noImplicitThis": true,
+        "useUnknownInCatchVariables": true,
+        "alwaysStrict": true,
+        "exactOptionalPropertyTypes": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "noUncheckedIndexedAccess": true,
+        "noImplicitOverride": true,
+        "noPropertyAccessFromIndexSignature": true,
+        "skipLibCheck": true,
+        "baseUrl": ".",
+        "jsx": "react-jsx",
+        "allowJs": true,
+        "noEmit": false
+    }
+}
